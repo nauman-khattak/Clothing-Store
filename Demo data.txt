@@ -1,0 +1,59 @@
+Create Table "Clothes Store"(
+"clothes quantity" int NOT NULL,
+"type" varchar(40) NOT NULL,
+"size" varchar(40) NOT NULL,
+Primary Key ("clothes quantity"));
+
+Insert into "Clothes Store" Values (1, 'Jacket', 'Medium');
+Insert into "Clothes Store" Values (2, 'Coat', 'Small');
+Insert into "Clothes Store" Values (3, 'Short', 'Medium');
+Insert into "Clothes Store" Values (4, 'Pant', 'Small');
+Insert into "Clothes Store" Values (5, 'Undergarments', 'Large');
+Insert into "Clothes Store" Values (6, 'Vest', 'Small');
+Insert into "Clothes Store" Values (7, 'Suit', 'Large');
+Insert into "Clothes Store" Values (8, 'Skirt', 'Small');
+Insert into "Clothes Store" Values (9, 'Beachwear', 'Medium');
+Insert into "Clothes Store" Values (10, 'Fancy dress', 'Large');
+Insert into "Clothes Store" Values (11, 'Knitwear', 'Medium');
+Insert into "Clothes Store" Values (12, 'Night clothes', 'Small');
+Insert into "Clothes Store" Values (12, 'Sportswear', 'Medium');
+Insert into "Clothes Store" Values (13, 'Tops', 'Large');
+Insert into "Clothes Store" Values (14, 'V-neck', 'Medium');
+Insert into "Clothes Store" Values (15, 'Swimwear', 'Large');
+Insert into "Clothes Store" Values (16, 'Leather', 'Medium');
+Insert into "Clothes Store" Values (17, 'Skirt', 'Small');
+Insert into "Clothes Store" Values (18, 'Beachwear', 'Medium');
+Insert into "Clothes Store" Values (19, 'Fancy dress', 'Large');
+Insert into "Clothes Store" Values (20, 'Knitwear', 'Medium');
+Insert into "Clothes Store" Values (21, 'Night clothes', 'Small');
+Insert into "Clothes Store" Values (22, 'Sportswear', 'Medium');
+Insert into "Clothes Store" Values (23, 'Tops', 'Large');
+Insert into "Clothes Store" Values (24, 'V-neck', 'Medium');
+Insert into "Clothes Store" Values (25, 'Swimwear', 'Large');
+Insert into "Clothes Store" Values (26, 'Leather', 'Medium');
+Insert into "Clothes Store" Values (27, 'Beachwear', 'Medium');
+Insert into "Clothes Store" Values (28, 'Fancy dress', 'Large');
+Insert into "Clothes Store" Values (29, 'Knitwear', 'Medium');
+Insert into "Clothes Store" Values (30, 'Night clothes', 'Small');
+Insert into "Clothes Store" Values (31, 'Sportswear', 'Medium');
+Insert into "Clothes Store" Values (32, 'Tops', 'Large');
+Insert into "Clothes Store" Values (33, 'V-neck', 'Medium');
+Insert into "Clothes Store" Values (34, 'Swimwear', 'Large');
+Insert into "Clothes Store" Values (35, 'Leather', 'Medium');
+Insert into "Clothes Store" Values (36, 'Night clothes', 'Small');
+Insert into "Clothes Store" Values (37, 'Sportswear', 'Medium');
+Insert into "Clothes Store" Values (38, 'Tops', 'Large');
+Insert into "Clothes Store" Values (39, 'V-neck', 'Medium');
+Insert into "Clothes Store" Values (40, 'Swimwear', 'Large');
+Insert into "Clothes Store" Values (41, 'Jacket', 'Medium');
+Insert into "Clothes Store" Values (42, 'Coat', 'Small');
+Insert into "Clothes Store" Values (43, 'Short', 'Medium');
+Insert into "Clothes Store" Values (44, 'Pant', 'Small');
+Insert into "Clothes Store" Values (45, 'Undergarments', 'Large');
+Insert into "Clothes Store" Values (46, 'Vest', 'Small');
+Insert into "Clothes Store" Values (47, 'Suit', 'Large');
+Insert into "Clothes Store" Values (48, 'Skirt', 'Small');
+Insert into "Clothes Store" Values (49, 'Beachwear', 'Medium');
+Insert into "Clothes Store" Values (50, 'Fancy dress', 'Large');
+
+Select * From "Clothes Store";

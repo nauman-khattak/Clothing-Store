@@ -7,9 +7,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.net.URL;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.*;
 import static javax.swing.JFrame.setDefaultLookAndFeelDecorated;
 
@@ -31,10 +28,8 @@ public class Login extends JFrame {
                         dispose();
                         try {
                             new Display_Store_Details();
-                        } catch (SQLException ex) {
-                            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
                         } catch (ClassNotFoundException ex) {
-                            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                            ex.printStackTrace();
                         }
                     } else {
                         JOptionPane.showMessageDialog(null, "Wrong Username or Password", "Eroor", JOptionPane.ERROR_MESSAGE);
@@ -47,13 +42,13 @@ public class Login extends JFrame {
             }
 
         });
-
+        
+        //this will close the program when X at the top right corner get clicked
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
             }
         });
-
     }
 
     public void initializeUI() {
@@ -85,17 +80,16 @@ public class Login extends JFrame {
         loginButton.setVisible(true);
         loginButton.setBackground(new Color(0, 96, 169));
         loginButton.setFont(new Font("Arial", Font.BOLD, 15));
-        URL url = getClass().getResource("login-system-icon-13.png");
-        ImageIcon imageIcon = new ImageIcon(url.getPath());
-        JLabel lb3 = new JLabel(imageIcon);
-        setBackground(Color.WHITE);
-        lb3.setBounds(280, 2, 300, 200);
+        URL loginIconPath = getClass().getResource("login-system-icon-13.png");
+        ImageIcon loginIcon = new ImageIcon(loginIconPath.getPath());
+        JLabel loginImageLabel = new JLabel(loginIcon);
+        loginImageLabel.setBounds(280, 2, 300, 200);
         add(lb);
         add(uNameTxtField);
         add(lb2);
         add(passwdField);
         add(loginButton);
-        add(lb3);
+        add(loginImageLabel);
         setVisible(true);
     }
 }
