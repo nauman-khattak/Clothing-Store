@@ -24,8 +24,10 @@ import javax.swing.table.JTableHeader;
 import javax.swing.table.TableColumnModel;
 
 public class Display_Store_Details extends JFrame {
-
-    String dbURL = "jdbc:derby://localhost:1527/Clothes-Store-DB;create=true;user=hudayjah;password=hudayjah";
+//    if you want to that database is created if it isn't already then use create=true in dbURL i.e uncomment the below dbURL and use it
+//    String dbURL = "jdbc:derby://localhost:1527/Clothes-Store-DB;create=true;user=hudayjah;password=hudayjah";
+//    I created the database with user=hudayjah  and password=hudayjah
+    String dbURL = "jdbc:derby://localhost:1527/Clothes-Store-DB;user=hudayjah;password=hudayjah";
     String tableName = " \"Clothes Store\" ";
     Connection conn = null; //jdbc connection
     Statement stmt = null;
@@ -179,7 +181,7 @@ public class Display_Store_Details extends JFrame {
                 stmt.close();
             }
             if (conn != null) {
-                DriverManager.getConnection(dbURL + ";shutdown=true");
+                DriverManager.getConnection("jdbc:derby://localhost:1527/Clothes-Store-DB;shutdown=true");
                 conn.close();
             }
         } catch (SQLException e) {
