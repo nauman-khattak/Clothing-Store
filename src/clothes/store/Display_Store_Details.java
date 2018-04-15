@@ -24,10 +24,13 @@ import javax.swing.table.JTableHeader;
 import javax.swing.table.TableColumnModel;
 
 public class Display_Store_Details extends JFrame {
+
+    String dbUserName = "hudayjah"; //database username, you entered at the time of creation, leave blank if you didn't specified
+    String dbPassword = "hudayjah"; 
 //    if you want to that database is created if it isn't already then use create=true in dbURL i.e uncomment the below dbURL and use it
-//    String dbURL = "jdbc:derby://localhost:1527/Clothes-Store-DB;create=true;user=hudayjah;password=hudayjah";
+//    String dbURL = "jdbc:derby://localhost:1527/Clothes-Store-DB;create=true;user="+dbUserName+";password="+dbPassword;
 //    I created the database with user=hudayjah  and password=hudayjah
-    String dbURL = "jdbc:derby://localhost:1527/Clothes-Store-DB;user=hudayjah;password=hudayjah";
+    String dbURL = "jdbc:derby://localhost:1527/Clothes-Store-DB;user=" + dbUserName + ";password=" + dbPassword;
     String tableName = " \"Clothes Store\" ";
     Connection conn = null; //jdbc connection
     Statement stmt = null;
@@ -102,7 +105,7 @@ public class Display_Store_Details extends JFrame {
         repaint();
         scrollPane.setVisible(true);
         getContentPane().setBackground(Color.DARK_GRAY);
-        
+
         //this will close the program when X at the top right corner get clicked
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
@@ -181,7 +184,7 @@ public class Display_Store_Details extends JFrame {
                 stmt.close();
             }
             if (conn != null) {
-                DriverManager.getConnection("jdbc:derby://localhost:1527/Clothes-Store-DB;shutdown=true");
+//                DriverManager.getConnection(dbURL + ";shutdown=true");
                 conn.close();
             }
         } catch (SQLException e) {
